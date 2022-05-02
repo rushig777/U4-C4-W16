@@ -33,6 +33,10 @@ const sortProducts = (dispatch,type) => {
 
 };
 
-const filterProducts = () => {};
+const filterProducts = (dispatch,type) => {
+    dispatch({
+        type:type,
+    })
+};
 
 export { getProductsData, sortProducts, filterProducts };

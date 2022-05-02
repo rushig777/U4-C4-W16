@@ -16,7 +16,7 @@ export const Products = () => {
   }, []);
   const handleSort = (e) => {
 
-    if(e.target.value=="asc"){
+    if(e.target.value=="desc"){
       const type=HIGH_TO_LOW;
       sortProducts(dispatch,type)
     }

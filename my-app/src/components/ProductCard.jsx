@@ -9,7 +9,7 @@ img{
 
 
 export const ProductCard = ({ item }) => {
-  console.log(item)
+  
 
   return (
     <>

@@ -18,16 +18,16 @@ const reducer = (state = initState,{ type, payload }) => {
         data:payload,
       }
       case HIGH_TO_LOW:
-      const  sortdata= state.data.sort((el)=>{
-        return el.price-el.price;
+      const  sortdata= state.data.sort((a,b)=>{
+        return a.price-b.price;
       })
         return{
           ...state,
           data:sortdata,
         }
         case LOW_TO_HIGH:
-      const  LOWdata= state.data.sort((el)=>{
-        return el.price-el.price;
+      const  LOWdata= state.data.sort((a,b)=>{
+        return a.price-b.price;
       })
         return{
           ...state,

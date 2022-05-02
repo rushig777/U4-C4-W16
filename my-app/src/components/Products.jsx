@@ -4,7 +4,7 @@ import { Select } from "./Styled";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductCard } from "./ProductCard";
-import { getProductsData } from "../Redux/actions";
+import { getProductsData,sortProducts } from "../Redux/actions";
 import { HIGH_TO_LOW, LOW_TO_HIGH } from "../Redux/actionTypes";
 export const Products = () => {
   const dispatch = useDispatch();
@@ -17,11 +17,11 @@ export const Products = () => {
   const handleSort = (e) => {
 
     if(e.target.value=="asc"){
-      type=HIGH_TO_LOW;
+      const type=HIGH_TO_LOW;
       sortProducts(dispatch,type)
     }
     else{
-      type=LOW_TO_HIGH;
+      const type=LOW_TO_HIGH;
       sortProducts(dispatch,type)
     }
    
